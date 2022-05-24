@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        
+        /* 박스모델에 대해서 최대한 알것은 알고가자. */
+        div#box1 {
+            background-color: yellow;
+            
+            box-sizing: content-box;
+            margin-bottom: 20px;
+            width: 200px;
+            height: 200px; 
+           /* border-color: purple; */
+            /* border-width: 5px;           상하좌우 동일하게 두께를 지정 */
+            /* border-width: 10px 5px;      상하를 결정, 그 후에 좌우 동일하게 두께를 지정 */
+            /* border-width: 10px 5px 2px;  상 결정, 그 다음에 좌우,그 후에 하 결정 */
+            /* border-width: 10px 8px 5px 3px; 상/우/하/좌 시계 방향으로 결정 */
+
+            /* border-style: solid; */
+
+            border:  5px ridge purple;   /* 단축형으로 모든 속성을 하나로 지정 */
+            /* padding: 50px;
+            margin: 100px; */
+        }
+        div#box2{
+            box-sizing:content-box;
+
+            width: 200px;
+            height: 200px;
+            border: 5px ridge red;
+            margin-top: 40px;
+
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">BOX1</div>
+    <div id="box2">BOX2</div>
+</body>
+
+</html>

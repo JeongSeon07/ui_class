@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+            font-size: 16pt;
+        }
+
+        p.c1 {
+            width: 700px;
+            height: 80px;
+
+            color: green;
+        }
+
+        p.c2 {
+            width: 50%;
+            height: 150%;
+
+            color: purple;
+        }
+        /* 퍼센트는 기준이 있어야 한다. 부모태그를 기준으로 함.가로너비는 적용되지만 세로 너비는 적용되지 않음 */
+
+        p.c3{
+            width: 10cm;
+            height: 3cm;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>박스 모델의 내용 영역 크기 지정</p>
+    <p class="c1">픽셀 단위로 지정</p>
+    <p class="c2">퍼센트 단위로 지정</p>
+    <p class="c3">센티미터 단위로 지정</p>
+</body>
+
+</html>
