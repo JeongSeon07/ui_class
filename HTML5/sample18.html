@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 5px solid violet;
+
+            background-color: burlywood;
+        }
+        #box1{
+            position: relative;
+
+            width:500px;
+            height: 500px;
+
+            border: 5px ridge blue;
+
+            background-color: white;
+        }
+
+        #box2{
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+
+            border: 5px ridge purple;
+            
+            background-color: greenyellow;
+        }
+        #box3{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+
+            border: 5px ridge purple;
+            
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">PARENT <br> <strong>relative</strong> 
+        <div id="box2">CHILD <br> <strong>absolute</strong><br>
+            <h3>image title</h3> 
+            <img src="https://picsum.photos/id/684/100/100">
+        </div>
+        
+        <div id="box3">CHILD <br> <strong>absolute</strong><br>
+            <h3>image title</h3> 
+            <img src="https://picsum.photos/id/684/100/100">
+        </div>
+
+        
+    </div>
+    
+   
+    
+</body>
+</html>
