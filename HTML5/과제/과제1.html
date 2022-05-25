@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>과제1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #logo {
+            float: left;
+            padding-top: 20px;
+            /* margin: 20px; */
+            /* margin-left: 15%; */
+        }
+
+        #menu1 li {
+            display: inline;
+        }
+
+        #menu2 li {
+            display: inline;
+            font-size: 20px;
+            padding: 10px 0 15px 60px;
+
+        }
+
+        #menu1 {
+            float: right;
+            padding-top: 15px;
+        }
+
+        #menu2 {
+            clear: right;
+            float: right;
+            padding-top: 30px;
+            font-family: "돋움";
+
+        }
+
+        #main_img {
+            padding-top: 20px;
+            width: 100%;
+        }
+
+        nav {
+            float: left;
+            margin: 10px 20px 450px 10px;
+        }
+
+        section {
+            margin-top: 20px;
+            margin-left: 10%;
+        }
+
+        #article_header {
+            font-size: 20px;
+            color: rgb(95, 93, 93);
+            font-weight: 510;
+            padding-bottom: 5px;
+            padding-top: 10px;
+        }
+
+        #menu3 li {
+            font-size: 10pt;
+            padding: 8px 120px 10px 14px;
+            border-bottom: dotted 1px gray;
+        }
+
+        #select {
+            font-size: 13pt;
+            padding: 10px 120px 10px 15px;
+            border: 1px;
+            background-color: #516E7E;
+            color: #65D9C6;
+        }
+
+        #article_desc1 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 13pt;
+            font-family: '돋움';
+        }
+
+        #dslr {
+            text-align: center;
+        }
+
+        #article_desc2 {
+            padding-top: 30px;
+            font-family: '돋움';
+        }
+
+        #article_desc3 {
+            font-family: '돋움';
+        }
+
+        #article_desc3 li {
+            padding: 5px;
+            font-family: '돋움';
+        }
+
+        footer {
+            clear: left;
+            height: 200px;
+            background-color: #2C2A29;
+            /* text-align: center; */
+        }
+
+        #footer_img {
+            float: left;
+            padding: 70px
+        }
+
+        #info {
+            color: white;
+            float: right;
+            padding: 70px 120px 70px 70px
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 로고, 메뉴,메뉴2 -->
+
+    <header id="header1">
+
+        <div id="logo">
+            <!-- 메인 로고 -->
+            <img src="img/logo.png" alt="">
+        </div>
+
+
+        <div id="menu1">
+            <!-- 로그인 메뉴 -->
+            <ul>
+                <li>로그인</li>
+                <li>|</li>
+                <li>회원가입</li>
+                <li>|</li>
+                <li>공지사항</li>
+            </ul>
+        </div>
+
+        <div id="menu2">
+            <!-- 콘텐츠 메뉴 -->
+            <ul>
+                <li>사진이론</li>
+                <li>사진구도</li>
+                <li>사진작가</li>
+                <li>갤러리</li>
+                <li>커뮤니티</li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 메인이미지 -->
+    <!-- <section>     -->
+    <div id="main_img">
+        <img id="main_img" src="img/main_img.png" width=auto>
+    </div>
+    <!-- </section> -->
+
+
+    <!--본문 내용 -->
+    <section>
+
+        <nav>
+            <!-- 메뉴3 -->
+            <div id="menu3">
+                <div id="select">사진이론</div>
+                <li>카메라 동작 원리</li>
+                <li>무조건 찍어보자!</li>
+                <li>피사체의 배경</li>
+                <li>조리개와 심도</li>
+                <li>카메라 촬영 모드</li>
+            </div>
+        </nav>
+
+        <article>
+            <header id="article_header">
+                <p>카메라 동작 원리</p>
+            </header>
+
+            <hr>
+            <p id="article_desc1">DSLR 카메라에서 DSLR은 "Digital Single Lens Reflex'의 약어로써 우리말로는 디지털 일안 반사식 카메라를 의미합니다. DSLR은
+                디지털 카메라로써 카메라 내부에 들어온 빛이 상단의 펜타프리즘을 통하여 뷰파인더에 맺히게 되어 셔터를 누르기 전에 뷰 파인더를 통하여 피사체를 확인할 수 있게 됩니다</p>
+
+            <div id="dslr">
+                <img src="img/dslr.png" alt="">
+            </div>
+
+            <div id="article_desc2">
+                <p>[그림 1]은 DSLR 카메라에서 셔터를 누르기 전의 상태를 보여주는데 렌즈를 통해 들어오는 빝은 카메라 내부에서 다음과 같은 과정을 거치게 됩니다.</p>
+
+                <div id="article_desc3">
+                    <ul>
+                        <li>①빛이 카메라 렌즈를 통과합니다.</li>
+                        <li>②빛이 반사 거울에 반사되어 위쪽으로 향합니다.</li>
+                        <li>③빛이 펜티프리즘 거울에 반사되어 뷰파인더로 향합니다.</li>
+                        <li>④들어온 빛에 의해 뷰파인더를 통하여 피사체를 볼 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </article>
+    </section>
+
+    <!-- 로고2, info -->
+    <footer>
+        <div id="footer_img">
+            <img src="img/footer_logo.png" alt="">
+        </div>
+
+        <div id="info">
+            <small>
+                <p>
+                    서울시 강남구 삼성동 1234 우:123-1234 <br>
+                    TEL:031-123-1234 Email : email@domain.com <br>
+                    COPYRIGHT(C) 루바토 ALL RIGHTS RESERVED
+                </p>
+
+
+            </small>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="kor">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>과제1</title>
+        <style>
+           body{
+               margin:0px;
+               margin-top: 5%;
+           }
+           li{
+               list-style-type: none;
+           }
+
+           ul{
+               margin: 0px;
+               padding: 0px;
+           }
+           #head{
+               border-top: solid 1px rgb(228,228,228);
+           }
+
+           #head_logo{
+               float: left;
+               margin: 20px;
+               margin-left: 15%;
+           }
+
+           #head_menu1{
+               float: right;
+               margin: 15px;
+               margin-right: 15%;
+           }
+           
+           #head_menu1 li{
+               display: inline;
+           }
+
+           #head_menu2{
+               clear:right; 
+               float:right;
+               margin-right: 15%;
+           }
+           #head_menu2 li{
+                display: inline;
+                margin-left:100px;
+                font-size: 20px;
+                font-weight: 700;
+           }
+
+           #body{
+                margin-top: 20px;
+                margin-right: 15%;
+                margin-left: 13%;
+                margin-bottom: 20px;
+                
+           }
+           
+           #body_menu{
+               width: 250px;
+               float: left;
+               margin-right: 20px;
+               height: 560px;                           /*body 영역 content height 맞춰준다.*/
+           }
+
+           #body_menu li{
+               padding: 10px;
+               border-bottom: dotted 1px black;
+           }
+
+           #li_head{
+               background-color: rgb(81, 110, 126);
+               color: rgb(122, 214, 204);
+               font-size: 20px;
+               padding: 10px;
+               border-bottom: 0px;
+           }
+
+           #body_title{
+                font-size: 25px;
+                border-bottom: solid 1px rgb(228,228,228);
+                margin-left: 10px;
+           }
+
+           #dslr{
+                text-align: center;   
+                padding: 20px;
+           } 
+
+           #footer{
+               clear:left;
+               background-color: rgb(43, 42, 40);
+               height: 200px;
+           }
+           
+           #footer_logo{
+               float:left;
+               margin: 70px;
+               margin-left: 15%;
+           }
+
+           #footer_text{
+               float:right;
+               color:white;
+               margin: 70px;
+               margin-right: 15%;
+           }
+        </style>
+    </head>
+    <body>
+        <div id="head">
+            <div id="head_logo">
+                <img src="img/logo.png" alt="">
+            </div>
+
+            <div id="head_menu1">
+                <ul>
+                    <li>로그인</li>
+                    <li>|</li>
+                    <li>회원가입</li>
+                    <li>|</li>
+                    <li>공지사항</li>
+                </ul>
+            </div>
+            
+            <div id="head_menu2">
+                <!-- clear_right -->
+                <ul>
+                    <li>사진이론</li>
+                    <li>사진구도</li>
+                    <li>사진작가</li>
+                    <li>갤러리</li>
+                    <li>커뮤니티</li>
+                </ul>
+            </div>
+
+            <div id="main_img">
+                <img src="img/main_img.png" alt="">
+            </div>
+        </div>
+
+        <div id="body">
+            <div id="body_menu">
+                <ul>
+                    <div id="li_head">사진이론</div>
+                    <li>카메라동작원리</li>
+                    <li>무조건찍어보자!</li>
+                    <li>피사체의 배경</li>
+                    <li>조리개와 심도</li>
+                    <li>카메라 촬영모드</li>
+                </ul>
+            </div>
+
+            <div id="body_title">
+                카메라 동작 원리
+            </div>
+
+            <div id="body_text1">
+                DSLR 카메라에서 DSLR은 "Digital Single Lens Reflex"의 약어로써 우리말로는 디지털 일안 반사식 카메라를 의미합니다. DSLR은 디지털 카메라로써 카메라 내부에 들어온 빛이 상단의 펜타프리즘을 통하여 뷰파인더에 맺히게 되어 셔터를 누르기 전에 뷰 파인더를 통하여 피사체를 확인할 수 있게 됩니다.
+            </div>
+            <div id="dslr">
+                <img src="img/dslr.png" alt="">
+            </div>
+            <div id="body_text2">
+                [그림 1]은 DSLR 카메라에서 셔터를 누르기 전의 상태를 보여주는데 렌즈를 통해 들어오는 빛은 카메라 내부에서 다음과 같은 과정을 거치게 됩니다.<br>
+                ① 빛이 카메라 렌즈를 통과합니다.<br>
+                ② 빛이 반사 거울에 반사되어 위쪽으로 향합니다.<br>
+                ③ 빛이 펜타프리즘 거울에 반사되어 뷰파인더로 향합니다.<br>
+                ④ 들어온 빛에 의해 뷰파인더를 통하여 피사체를 볼 수 있습니다.<br>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="footer_logo">
+                <img src="img/footer_logo.png" alt="">
+            </div>
+            
+            <div id="footer_text">
+                <ul>
+                    <li>서울시 강남구 삼성동 1234 우:123-1234</li>
+                    <li>TEL:031-123-1234 Email : email@domain.com</li>
+                    <li>COPYRIGHT(C)루바토 ALL RIGHTS RESERVED</li>    
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
