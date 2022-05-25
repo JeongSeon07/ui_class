@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes bounce {
+            from, to {
+                bottom: 0px; /* 바닥에서 시작하고 바닥에서 끝나야하니까 */
+                animation-timing-function: cubic-bezier(.37,.9,0,.77);
+            }
+            50% { /* duration시간중에서 50%일 때의 지정 */
+                bottom: 200px;
+                animation-timing-function: ease-in-out;
+            }
+        }
+
+        div{
+            position: absolute;
+
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+           
+            box-shadow:  2px 2px 10px silver;
+
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+
+            text-align: center;
+        }
+
+        #b1{
+            left: 50px;
+            background: red;
+            animation-duration: 2.2s;
+        }
+        #b2{
+            left: 100px;
+
+            background-color: blue;
+
+            animation-duration: 2s;
+        }
+        #b3{
+            left: 150px;
+
+            background-color: green;
+
+            animation-duration: 1.3s;
+        }
+        #b4{
+            left: 200px;
+
+            background-color: gray;
+
+            animation-duration: 1.8s;
+        }
+        #b5{
+            left: 250px;
+            background-color: yellow;
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+   <div id="b1">b1</div>
+   <div id="b2">b2</div>
+   <div id="b3">b3</div>
+   <div id="b4">b4</div>
+   <div id="b5">b5</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 미디어 쿼리 문법: @media<미디어유형> and (미디어 특징1) and ...
+        단 미디어 유형이 생략되면 미디어 유형은 all임
+        (<미디어 특징>)에서 소괄호()는 생략불가 */
+
+        @media(max-width: 490px) {
+            body {
+                color: white;
+                background-color: red;
+            }
+        }
+
+        @media(min-width: 500px) and (max-width: 799px) {
+            body {
+                color: white;
+                background-color: green;
+            }
+        }
+
+        @media (min-width: 800px) {
+            body{
+                color: white;
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum.</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores ex soluta obcaecati sed nemo sunt ipsum exercitationem, consequuntur delectus dignissimos fugiat voluptatum ut officia ea, commodi dolore illum placeat quos minus alias vero repellendus asperiores? Adipisci obcaecati blanditiis a alias amet ab ex tempora iure, vitae architecto dolores sunt veniam, animi dolorem fugiat nobis, explicabo similique delectus accusantium tempore consequuntur! Eos excepturi quia cumque officia aperiam minus praesentium vel, libero eligendi ab corporis iste ipsum facere a dolorem quasi, nemo officiis! Deleniti expedita veritatis neque praesentium numquam quis quaerat accusamus laborum, alias eaque, debitis vitae quos! Vero ratione quidem nobis distinctio minima laboriosam ab excepturi, praesentium necessitatibus aliquid similique, optio, harum laudantium? Hic iste eos eius deleniti minima id excepturi ducimus ratione ullam voluptas laborum nisi nulla quod soluta perferendis eum, ipsum aliquid facere nesciunt modi, distinctio sequi! Nostrum ipsum numquam dolores corporis quidem voluptates ipsa obcaecati debitis distinctio ratione!</p>
+</body>
+</html>

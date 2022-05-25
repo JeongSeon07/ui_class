@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta 
+    name="viewport" 
+    content="user-scalable=no, initial-scale=1.0, maximum-scale=1" >
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden; /* 정해진 뷰를 넘는 부분이 있다면 그 부분을 잘라줌 */
+        }
+
+        #menu{
+            width: 260px;
+            float: left;
+        }
+
+        #section {
+            width: 700px;
+            float: right;
+        }
+
+        @media screen and (max-width: 760px) {
+            body {
+                width: auto;
+            }
+            #menu{
+                width: auto;
+                float: none;
+            }
+            #section{
+                width: auto;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ul>
+    </div>
+
+    <div id="section">
+        <h1>Lorem.</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis animi dolorem inventore sint, velit unde praesentium quis totam sequi harum provident tempore veritatis iste reiciendis, numquam, repudiandae deserunt? Earum est tempora libero voluptas ullam aut quae aspernatur, ea similique vitae mollitia cum maxime odit ipsam expedita quaerat praesentium debitis quisquam.</p>
+    </div>
+
+
+</body>
+</html>

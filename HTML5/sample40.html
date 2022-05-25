@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @keyframes boxmove {
+            from {
+                left:0px;
+            }
+            to {
+                left: 300px;
+            }
+        }
+        div { /* absolute없는 이유: 원래위치에서 오른쪽으로 이동하기 때문에 */
+            width: 100px;
+            height: 50px;
+
+
+            text-align: center;
+            line-height: 50px; /* 글씨가 가운데로 가게 만들기 위해 태그의 전체 높이와 동일하게 설정해준다. */
+            background: rgb(4, 16, 248);
+            color: white;
+            border: 5px ridge pink;
+
+            /* 애니메이션의 키프레임에서 left 위치 속성을 사용하기 때문에 이 div태그의 위치속성은 position:relative로 설정함 */
+            position: relative;
+
+            /* 정의된 애니메이션 사용 */
+            animation: boxmove 5s linear infinite alternate;
+        }
+
+        #box1{
+            animation-delay: 3s;
+        }
+        #box2{
+            animation-delay: 5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">애니메이션 박스1</div>
+    <div id="box2">애니메이션 박스2</div>
+</body>
+</html>
