@@ -1,0 +1,1 @@
+document.write("<h3>ejs3.js</h3>");
