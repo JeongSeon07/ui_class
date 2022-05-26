@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자색 바꾸기</title>
+    <link rel="stylesheet" href="css/text-color.css">
+    
+</head>
+<body>
+    <h1 id="heading">안녕 자바스크립트</h1>
+    <p id="text">위의 텍스트를 클릭해보세요</p>
+
+    <!-- 외부파일의 경우: 이 파일은 h1태그를 이용한 코드인데 코드가 위에서부터 아래로 내려가다 보니 헤드부분에 스트립트를 설정하면 그 상태에서는 h1이 아직 생성되지 않아서 오류가 난다. 그래서 h1이 생성되고 난 후 자리에 생성한다. -->
+    <script src="js/text-color.js"></script>
+
+
+
+    <!-- <script>
+        //heading변수를 선언하고 h1태그를 저장한것이다.
+        // var heading = document.querySelector("#heading");
+        // //h1태그를 클릭을 하면 글자색을 바꿔라.
+        // heading.onclick = function() {
+        //     heading.style.color = "red";
+        // }
+
+    </script> -->
+</body>
+</html>
