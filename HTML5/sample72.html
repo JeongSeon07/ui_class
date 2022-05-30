@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var text1 = "함수 선언 전 호출 에러";
+        var text2 = "함수 선언 후 호출만 가능";
+
+        //printmsg(text1);                  //함수 선언 전 호출 에러, 변수 생성 후에 호출 가능
+
+        var printMsg = function (msg) {     //함수 객체 선언
+            console.debug(`printMsg(${msg}) invoked. `);
+            
+            // document.write("함수 호출 메시지: ",msg,"<br>");
+        };  //함수 1급 객체의 성질을 보여줌: 함수는 변수에 대입 가능하다.
+
+
+        console.log('>>>>>printMsg: ',printMsg);
+        printMsg(text2);                    //함수 선언 후 호출 가능
+    </script>
+</body>
+</html>
