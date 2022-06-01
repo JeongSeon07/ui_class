@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //함수 오버로딩을 지원하는 것처럼 보이지만 지원하지 않고, 가장 마지막에 선언된 동일이름의 함수가 최종 함수가됨
+        function add() {
+            console.debug
+            var sum =1;
+            return sum;
+        }
+        function add(x) {
+            var sum =x+1;
+            return sum;
+        }
+        function add(x,y) {
+            var sum =x+y;
+            return sum;
+        }
+        function add(x,y,x) {
+            var sum =x+y+z;
+            return sum;
+        }
+
+    </script>
+</body>
+</html>

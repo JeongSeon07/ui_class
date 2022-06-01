@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const com = [95, 88, , 72, 68, , 99, 82,78,85];             //10명 중 8명의 점수만 입력
+
+        var getAvg;
+
+        function printAvg() {
+            let i = 0, sum = 0;
+            let n = com.length;
+            document.write(`${n}명의 점수 입력<p><p/>`);
+
+                let scores = 0;
+            for(;i < n;i++) {
+                if(com[i] !== undefined){
+                    ++scores;
+                    sum += com[i];
+                }else continue
+            }
+
+            return (sum / scores);
+        }
+
+        getAvg = printAvg();
+        document.write(`평균 : ${getAvg}`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var city = [];              //빈 배열 생성
+
+        //빈 배열에 새로운 원소를 인덱싱 기법으로 얼마든지 추가 가능
+        city[0] = "seoul";
+        city[1] = "busan";
+        city[2] = "incheon";
+        city[3] = "mokpo";
+        city[4] = "sejeong";
+        city[6] = true;         //일부러 중간 번호를 제외하고 지정,5번은 undefined 자동 지정
+
+        function printArr() {
+            console.debug(`printArr invoked`)
+            console.log(`\t+ arr.length; ${city.length}`); 
+            let i;
+            for(i = 0; i <city.length; i++) {
+                document.write(`배열 데이터[${i}] = ${city[i]} <br>`);
+            }
+        }
+
+        printArr();
+    </script>
+</body>
+</html>

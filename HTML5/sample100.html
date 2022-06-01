@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arrdata =[];
+
+        function insertArr() {
+            for (let i =0; i<=99;i++) {
+                arrdata[i] = i +1;
+                document.write(`${arrdata[i]}`);
+            }
+        }
+
+        function delArr(){
+            for(let i=0; i < arrdata.length; i++) {
+                if(i % 2 == 0) {
+                    arrdata[i] = 0;
+                }else continue;
+            }
+            selectArr();
+        }
+
+        function selectArr() {
+            for(let i = 0; i < arrdata.length;i++) {
+                document.write(`${arrdata[i]}`);
+            }
+            document.write(`<p>홀수 번째 데이터 초기화 완료!</p>`);
+            document.write(`<a href ='22_arr.html'>돌아가기</a>`)
+        }
+        insertArr();
+    </script>
+</body>
+
+</html>

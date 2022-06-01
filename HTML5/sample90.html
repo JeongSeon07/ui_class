@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add() {
+            console.clear();
+            
+            console.group('add');
+            
+            console.debug(`add() invoked`)
+            //함수호출로그를 쓰는 이유: 어느부분에서 오류가 나는것인지 확인차
+            //왜 디버그를 하는지? 로그레벨을 설정히여 실사용 서버에는 보이지 않게 하기위함이다.
+            let i, sum = 0;
+
+            // arguments:함수 블록 내부에서만 사용 가능한 키워드로 곧 배열객체임
+            // 함수 호출자가 전달한 모든 전달인자값들을 원소로 가지는 배열객체임
+            console.log('\t+ arguments:',arguments);
+            for (i=0; i < arguments.length;i++){
+                sum = sum + arguments[i];
+            }
+
+            console.log(`수행결과 : ${sum}`);
+
+            console.groupEnd();
+        }
+
+        add(2,3);
+        add(2,3,4);
+
+    </script>
+</body>
+</html>

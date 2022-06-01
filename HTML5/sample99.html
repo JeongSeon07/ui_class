@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arrdata =[];
+
+        function insertArr() {
+            for(let i = 0; i <99;i++) {
+                arrdata[i] = i + 1;
+            }
+            selectArr();
+        }
+
+        function selectArr() {
+            for(let i= 0; i < arrdata.length; i++) {
+                document.write(arrdata[i] + " ");
+            }
+
+            addArr();
+        }
+
+        function addArr() {
+            var sum = 0;
+
+            for (let t = 0; i < arrdata.length; i++) {
+                sum += arrdata[i];
+            }
+
+            document.write(`<p></p> 배열 데이터 덧셈 연산결과: ${sum}<p></p>`);
+            document.write(`<a href='21_arr.html'>돌아가기</a>`);
+        }
+    </script>
+
+    <!-- 글로벌 이벤트 속성인 onxlic의 값으로 이벤트헨들러 고드로 자바스크립트 함수호출 실행 문장 지정 -->
+    <button type="button" onclick="insertArr()">배열 생성/조회/연산</button>
+</body>
+
+</html>

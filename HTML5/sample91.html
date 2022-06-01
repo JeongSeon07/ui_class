@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var city = ["seoul","busan","incheon",100,3.14489,() =>{}];     //배열 리터럴
+
+        function printArr() {
+            console.debug(`printArr invoked`)
+            console.log(`\t+ arr.length; ${city.length}`); 
+            let i;
+            for(i = 0; i <city.length; i++) {
+                document.write(`배열 데이터[${i}] = ${city[i]} <br>`);
+            }
+        }
+
+        printArr();
+    </script>
+</body>
+</html>

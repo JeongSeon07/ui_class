@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var x = 5;
+        var arr =[100,"seoul",true,x];          //다양한 데이터 타입 저장
+
+        x = 10;
+
+        function printArr() {
+            console.clear();
+            console.group('printArr');
+
+            console.debug(`printArr() invoked`);
+            console.log(`\t+ arr.length: ${arr.length}`);
+
+            let i = 0;
+
+            for( ;i<arr.length;i++) {
+                document.write(`배열 데이터[${i}] =${arr[i]} , 타입:${typeof arr[i]} <br>`)
+            }
+
+            console.groupEnd();
+        }
+
+        printArr();
+    </script>
+</body>
+
+</html>
