@@ -17,13 +17,13 @@
 
         function printMsg(msg) {        //1.함수 선언
             //ES6: template String (ex.`name: ${변수이름}```)
-            console.trace(`printMsg(${msg}) invoked.`);
+            console.debug(`printMsg(${msg}) invoked.`); 
             document.write("함수 호출 메시지: ", msg, "<br>");
         }
 
         printMsg(text2);                //2.함수 선언 후 호출
 
-        console.log('msg: ',msg)
+        console.log('msg:',msg);        //함수의 블록이 이미 파괴됨
     </script>
 </body>
 </html>

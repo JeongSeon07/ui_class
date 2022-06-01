@@ -13,11 +13,23 @@
         var ct = st.length;
         for( ; ; ) {
             if(num<ct) {
-                console.log ("for문 수행: ",num,"<p/>");
+                console.log ("for문 수행: ",num);
                 num++;
                 continue;
             }
             break;
+        }
+
+        var arr = [1,2,3,4,5];
+        console.log ('typeof arr:',typeof arr);
+        console.log(arr);       //prototype에서 찍힌게 진짜 타입
+
+        for(var number of arr) {        //원소의값
+            console.log(number);
+        }
+
+        for(var index in arr) {         //인덱스번호
+            console.log(index);
         }
     </script>
 </body>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arrdata =[];
+
+        function insertArr() {
+            console.debug(`insertArr() invoked`);
+            
+
+            for (let i = 0; i<=99;i++) {
+                arrdata[i] = i + 1;
+
+                document.write(`${arrdata[i]}`);
+            }
+
+            document.write(`<p>배열크기:${arrdata.length} </p>`);
+        }
+
+        function delDataArr() {
+            console.debug(`delDataArr() invoked`);
+            
+            for(let i =0; i < arrdata.length;i++) {
+                arrdata[i] = 0;
+            }
+            selectArr();
+        }
+
+        function allDelArr(){
+            console.debug(`allDelArr() invoked`);
+
+            arrdata.length = 0;
+
+            selectArr();
+        }
+
+        function selectArr(){
+            console.debug(`selectArr() invoked`);
+
+            // for(let i = 0; i<arrdata.length;i++) {
+            //     document.write(arrdata[i] + "");
+            // }
+
+            arrdata.forEach(v => document.write(v + ""));
+
+            document.write(`배열크기: ${arrdata.length} </p>`);
+            document.write(`<a href = '23_arr.html'> 돌아가기</a>`);
+        }
+
+        insertArr();
+        
+    </script>
+    <p></p>
+    <button type="button" onclick="delDataArr();">배열데이터 초기화</button>
+    <button type="button" onclick="allDelArr();">배열 데이터 삭제</button>
+</body>
+</html>
