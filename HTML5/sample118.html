@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr0 = [10,20,30,40,50];
+        const arr1 = [11,21,31,41,51];
+        const arr2 = [12,22,32,42,52];
+        const arr3 = [13,23,33,43,53];
+       
+        const allArr = [arr0,arr1,arr2,arr3];       //2차원 배열 생성: 각 원소가 또 1차원 배열임
+        const partArr =[arr1,arr3];
+
+        //이 함수 안의 2차원 배열의 순회를 enhanced for(for-of문)으로 만들어보세요
+        function printAll() {                       //2차원 배열의 모든 요소를 순회하면서 출력
+            for(var x =0; x <allArr.length;x++){
+                for(var y=0;y<allArr.length;y++) {
+                    console.log(`${allArr[x],[y]}`);
+                }
+
+                console.log(`<p></p>`);
+
+            }
+
+            console.log(`<a href = '39_arr.html'>돌아가기</a>`);
+        }
+
+        function printPart() {                      //2차원 배열의 모든 요소를 순회하면서 출력
+            // for(let x =0;x<partArr.length;x++) {
+            //     for(let y=0; y <partArr[x].length;y++) {
+            //         console.log(`${partArr[x][y]}`);
+            //     }
+
+            //     console.log(`<p></p>`);
+
+            // }
+            // console.log(`<a href = '39_arr.html'>돌아가기</a>`)
+
+            for(let tempArr of partArr){
+                for(let Number of tempArr) {
+                    console.log(Number);
+                }
+            }
+        }
+
+    </script>
+
+    <button type="button" onclick="printAll();">전체 배열 데이터보기</button>
+    <button type="button" onclick="printPart();">홀수 배열 데이터보기</button>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //중괄호기호는 원래 리터럴 방식으로 객체를 만드는 기호임.
+        //때문에 연관배열 객체를 구분하기 위해서, 키의 타입을 문자열이길 요구함
+        const data = {'f0':100, 'f1':200, 'f2':300};
+
+        //연관배열의 원소에 접근하는 방법은 아래와 같이 두가지임
+        //1.연관배열변수[key] 2.연관배열변수
+        data['f3'] = 400;
+        data.f4 = 500;
+
+        //2.연관배열 변수.[key]방식으로 더 많이 사용
+        console.log(`${data.f0}`);      //f0키 데이터 조회
+        console.log(`${data.f1}`);      //f1키 데이터 조회
+        console.log(`${data['f2']}`);   
+        console.log(`${data['f3']}`);
+        console.log(`${data['f4']}`); 
+    
+
+
+
+
+    </script>
+</body>
+
+</html>

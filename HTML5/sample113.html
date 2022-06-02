@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const data = [21,42,33,14,26,12,28,16,11];
+
+        function filterArr(value) {
+            return value >= 18;     //배열의 원소는 이 조건식이 참이 되는 원소만 새로운 배열에 넣음
+        }
+
+        // var fdata = data.filter(filterArr);
+        var fdata = data.filter(v => v >= 18);
+
+
+
+        console.log(`필터 전 배열 : ${data}`);
+        console.log(`필터 후 배열 : ${fdata}`);
+    </script>
+</body>
+
+</html>
