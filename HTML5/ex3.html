@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="carname"></p>
+    <p id="carcolor"></p>
+    <p id="carspeed"></p>
+
+    <script>
+        const car = {
+            name: 'Sonata',
+            speed: 50,
+            color: 'white',
+
+            // start: function() {
+            //     console.debug(`start() invoked`);
+            //     console.log(this);
+            //     return this.speed + 10;
+            // }
+
+            start : () => {
+                console.debug(`start() invoked`);
+                console.log(this);
+                return this.speed + 10;
+            }
+        };
+
+        const cname = document.getElementById("carname");
+        cname.textContent = car.name;
+
+        const colname = document.getElementById("carcolor");
+        cname.textContent = car.color;
+
+        const cspeed = document.getElementById("carspeed");
+        cname.textContent = car.start;
+    </script>
+</body>
+</html>
