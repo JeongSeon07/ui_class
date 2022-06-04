@@ -15,7 +15,9 @@
 
     <script>
         document.getElementById("d1").innerHTML = new Date();
-        document.querySelector("#d1").innerHTML = new Date();
+        document.querySelector("#d1").innerHTML = new Date();       //실전에서 표준
+        document.querySelectorAll("#d1").innerHTML = new Date();    //여러개의 태그를 한번에 선택하고자 할 때
+
 
         document.getElementById("d2").innerHTML = new Date(123456789);
         document.querySelector("#d2").innerHTML = new Date(123456789);

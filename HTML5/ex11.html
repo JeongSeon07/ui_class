@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function add() {
+            var img = document.createElement('img');        //img 태그 생성
+
+
+            console.log(img instanceof Node);
+            console.log(img instanceof Element);
+            console.log(img instanceof HTMLElement);
+            console.log(img instanceof HTMLImageElement);
+
+
+
+
+
+            //img 태그가 가지고 있는 속성의 값 설정
+            img.src = 'https://picsum.photos/id/1025/600/400';
+            img.width = 100;
+            img.height = 122;
+
+            document.body.appendChild(img);
+        }
+    </script>
+</head>
+
+<body>
+    <a href="#" onclick="add();">[이미지 추가]</a>
+
+    <!-- 이 부분에 새로운 이미지 태그를 만들어 넣자 -->
+</body>
+
+</html>

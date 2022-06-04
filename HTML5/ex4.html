@@ -17,9 +17,10 @@
             name: 'Sonata',
             speed: 50,
             color: 'white',
-            speedup: function() {
-                // return this.speed + 10;
-                return speed + 10
+           
+            speedup: function () {
+                return this.speed + 10;
+                // return speed + 10        xx
             },
 
             speeddown: function () {
@@ -29,10 +30,10 @@
         };
 
         var upspeed = document.getElementById("upspeed");
-        upspeed.textContent = `속도 증가 : ${car.speed()}`;
+        upspeed.textContent = `속도 증가 : ${car.speedup()}`;
 
         var downspeed = document.getElementById("downspeed");
-        downspeed.textContent = `속도 증가 : ${car.speed()}`;
+        downspeed.textContent = `속도 감소 : ${car.speeddown()}`;
 
 
     </script>
