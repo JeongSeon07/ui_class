@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            console.clear();
+            //공백으로 선택자들을 구분하는 후손선택자를 이용하여 요소 선택
+            $("#wrap h1").css({"background-color":"yellow",
+            //객체 리터럴 방식으로 여러 css속성들을 한꺼번에 지정가능
+            "border":"2px dashed #f00"
+            });
+        });
+       
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>인접 관계 선택자</h1>
+
+        <p>내용1</p>
+
+        <section>
+            <h1>하위 요소 선택자</h1>
+
+            <p>내용2</p>
+        </section>
+    </div>
+</body>
+</html>
