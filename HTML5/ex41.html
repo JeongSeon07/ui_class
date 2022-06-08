@@ -20,9 +20,9 @@
                 border: "2px dashed #f00"
             }
 
-            $(".txt").prev().css(style_1);
-            $(".txt + p").css(style_2);
-            $(".txt").next().next().css(style_2);   //내용4
+            $(".txt").prev().css(style_1);  //선택한 요소의 이전 요소
+            $(".txt + p").css(style_2);     //선택한 요소의 다음 요소
+            $(".txt").next().next().css(style_2);   //선택한 요소의 다음 요소
         });
     </script>
 </head>

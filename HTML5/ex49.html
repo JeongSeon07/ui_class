@@ -14,6 +14,9 @@
         $(function (){
             //eq equal의 뜻으로 지정된 순번의 요소를 선택
             //0부터 시작
+            //eq 선택한 요소 중 지정한 인덱스가 참조하는 요소를 불러온다.
+            //lt 선택한 요소 중 지정한 인덱스보다 작은 인덱스가 참조하는 요소를 불러온다
+            //gt 선택한 요소 중 지정한 인덱스보다 큰 인덱스가 참조하는 요소를 불러온다.
             $("#menu li").eq(2).css({backgroundColor:"red"});//2번째 li 선택   
             $("#menu li:lt(2)").css({backgroundColor:"green"}); //less than 2 번재 li선택
             $("#menu li:gt(2)").css({backgroundColor:"blue"});//greater than 2 번재 li 선택

@@ -14,12 +14,12 @@
 
     <script>
         $(function() {
-            $("#menu1 li:nth-child(1)").css({backgroundColor:"#ff0"});
-            $("#menu1 li:nth-child(2n)").css({border:"2px dashed #f00"});
+            $("#menu1 li:nth-child(1)").css({backgroundColor:"#ff0"});  //지정한 요소 무리중 지정한 요소만 선택한다.
+            $("#menu1 li:nth-child(2n)").css({border:"2px dashed #f00"});   //지정한 요소 무리 중 지정한 배수 번째에 있는 요소만 선택한다.
             //2의 배수
 
             $("#menu2 li:nth-last-child(2)").css({backgroundColor:"#0ff"});
-            //마지막 자식에서 두번째 
+            //지정한 요소 무리 중에서 마지막에서 인덱스번째
         })
     </script>
 </head>
