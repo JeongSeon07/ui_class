@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            console.clear();
+
+            //선택한 요소에 선택한 태그가 들어있다면 인덱스번호를 반환, 없다면 -1이 나온다.이는 
+            let idxNum = $("li").index($("#list3"));
+            console.log(idxNum);
+        });
+    </script>
+</head>s
+<body>
+    <h1>배열 관련 메소드</h1>
+
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li id="list3">내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+</html>

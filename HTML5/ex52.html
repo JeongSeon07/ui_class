@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+
+            console.clear();
+            //후손 선택자
+            // slice: 지정된 요소에서 인덱스 1번부터 3번까지이되 하프오픈이라 3번은 포함시키지 않는다.
+            //마지막 요소는 생략가능하고 이 경우 끝까지 포함한다. 
+            $("#menu1 li").slice(1,3).css({backgroundColor:"yellow"});
+            //구조적 가상 클래스 선택자
+            //지정된 태그 중의 자식이 하나인 태그가 있다면 그것만 선택한다
+            $("li:only-child").css({backgroundColor:"red"});    //외동자식 선택자
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>탐색 선택자</h1>
+
+    <ul id="menu1">
+        <li>내용1-1</li>
+        <li>내용1-2</li>
+        <li>내용1-3</li>
+        <li>내용1-4</li>
+    </ul>
+
+    <ul id="menu2">
+        <li>내용2-1</li>
+    </ul>
+</body>
+
+</html>

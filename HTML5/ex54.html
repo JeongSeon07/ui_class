@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            console.clear();
+
+
+            //리터럴 객체를 원소로 가지는 배열 생성
+            let arr1 = [{
+                area:"서울",
+                name:"무대리"
+            },{
+                area:"부산",
+                name:"홍과장"
+            },{
+                area:"대전",
+                name:"박사장"
+            },{
+                area:"서울",
+                name:"빅마마"
+            }];
+
+            //mapping결과로 나온 새로운 배열을 let변수에 저장
+            //사상작업: 배열안의 객체 중에, 사는 지역이 서울인 사람객체만 새로운 배열로 반환
+            //arr1이  e,i에게 객체를 하나씩 끄집어 내서 적용해줌
+            // let arr2 = $.map(arr1, function(e,i) {
+            //     // if(e.area == "서울") {
+            //     //     return e;
+            //     // }   
+
+            //     return e.name;      //객체 => string
+            // });
+            // console.log(arr2);
+            // console.log("=== first End ===");
+
+
+            //grep 매소드: 필터링 수행
+            let arr3 = $.grep(arr1,function(e,i) {
+                if(e.area == "서울"){
+                    return true;
+                }else {
+                    return false;
+                }
+            });
+            console.log(arr3);
+            console.log("=== Second End ===");
+
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
