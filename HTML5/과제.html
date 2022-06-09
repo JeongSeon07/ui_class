@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <style>
+        body {
+            height: 3000px;
+            background-image: linear-gradient(45deg,red,yellow,blue);
+        }
+    </style>
+
+    <script>
+        // $(function() {
+
+            console.clear();
+
+            
+            //(selector).animate({styles},speed,easing,callback)
+            $("html,body").animate({
+                
+	            scrollTop: $("body").height() 
+                }, 1000);
+            
+            //현재 스크롤 위치를 콘솔에 찍음
+            window.onscroll = () => console.log(`current pos: ${window.scrollY}`);
+
+        // });
+
+        
+        </script>        
+
+
+	        
+
+
+            <!-- // let topNum = $("html,body").offset().top;
+            // $("html,body").scrollTop($(document).height());
+            // $("html,body").animate($("html,body").offset().top,500);
+            // let topNum = $("h1").offset().top;
+            // $(window).scrollTop(bottomNum);
+
+            // $(window).scrollTop(100);       //이전에서 증가된 위치 이동된자리에서 반복 불가
+            // function scroll() {
+            //     window.scrollBy(0,100);//증분 가능한 메소드
+                
+            // }          
+            // $setInterval(scroll,100);
+            // // $("body").smoothWheel(); 
+            // scrolldelay = setTimeout(scroll,10);
+
+            // window.onscroll = () => console.debug(`current pos: ${window.scrollY}`);        //스크롤 위치 지정 -->
+
+
+        
+    
+</head>
+<body>
+
+</body>
+</html>

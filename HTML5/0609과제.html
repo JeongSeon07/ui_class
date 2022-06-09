@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            height: 3000px;
+            width: 100%;
+            background-image: linear-gradient(45deg, red, orange, yellow, green, blue, navy, purple);
+            position: relative;
+        }
+
+        #upButton{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* ------------------------------------------------------ */
+        
+        #bar_Box{
+            background-color: rgb(185, 181, 181);
+            width: 500px;
+            height: 30px;
+            
+            border: 1px solid white;
+            position: fixed;
+            
+            left: 10px;
+            top: 30px;
+        }
+        #bar{
+            
+            background-color: rgb(255, 34, 0);
+
+            width: 1px;
+            height: 30px;
+        }
+     </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+
+    <script>
+        $(function(){
+            console.clear();
+
+            // $(selector).click(function)
+            $('#downButton').click(function(){
+                let offset = $('#upButton').offset();
+
+                //(selector).animate({styles},speed,easing,callback)
+                $('html').animate({scrollTop : offset.top}, 1000);
+
+                window.onscroll = () => console.log(`current pos: ${window.scrollY}`);
+            });
+
+            // $(selector).click(function)
+            $('#upButton').click(function(){
+                let offset = $('#downButton').offset();
+
+                //(selector).animate({styles},speed,easing,callback)
+                $('html').animate({scrollTop : offset.top}, 1000);
+
+                window.onscroll = () => console.log(`current pos: ${window.scrollY}`);
+            })
+
+
+            //------------------------------------------
+
+
+            //프로그래스바를 구현하기 위한 스크롤메소드 
+            $(window).scroll(function() {
+                let nowH = $(window).scrollTop();       //현재 스크롤의 위치
+                let docH = $("body").height();          //바디의 총 높이
+                let winH =$(window).height()             //제일 먼저 뜨는 뷰포트 영역(제외시키기 위해 변수 선언)
+
+                //총 스크롤 진행률 구하기
+                var scrollPercent = (nowH / (docH - winH)) * 100;
+                
+                //스크롤 진행률을 css에 적용
+                // $("#bar_box").outerWidth.css("width",docH+"%")
+                $("#bar").css("width",scrollPercent+"%")
+               console.log(scrollPercent);
+            })
+
+           
+        });
+    </script> 
+</head>
+
+<body>
+    <button id="downButton">아래로 이동</button>
+    <button id="upButton">위로 이동</button>
+
+    <div id="bar_Box">              <!-- 박스 바닥 -->
+        <div id="bar"></div>        <!-- 실제 진행률이 표시되는 박스 -->
+    </div>
+</body>
+
+</html>

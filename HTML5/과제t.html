@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <style>
+        body {
+            height: 3000px;
+            background-image: linear-gradient(45deg,red,yellow,blue);
+        }
+    </style>
+
+    <script>
+        $(function() {
+            const px = 3;       //매 주기마다 스크롤바를 이동시킬 픽셀 수 
+            const interval = 50;// (간격) 주기 설정(ms)
+            const maxHeigt = 3000;//브라우저 viewport의 최대 높이 설정
+
+            //지정된 시간 주기에 따라 수직 스크롤바를 움직일 이동픽셀수를 호출함수의 인자로 전달
+            const intervalId = setInterval(scrollTop,interval,px)
+
+            //2. 웹브라우저 윈도의 스크롤바의 위치에 이동할 때 발생하는 이벤트인 onscroll에 이벤트 헨들러로 익명함수 설정
+            // window.addEventListener('scroll', function() {
+            //     console.debug(`>> current position: ${window.scrollY}`)
+
+            //         if(window.scrollY > maxHeigt) {
+            //             clearInterval(intervalId);
+            //             console.debug(`setInterval released.`)
+            //         }//if
+            //     }//f
+            // );//addEvent
+
+            $(window).scroll(() => {
+                console.debug(`>> current position: ${window.scrollY}`)
+            })
+            
+            //3.window 내장 객체의 scrollby메소드로 인자값만큼의 픽셀 수로 수직 스크롤 증분 이동시킴
+            function scrollTop(pixels) {
+                window.scrollBy(0,pixels)
+            }
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

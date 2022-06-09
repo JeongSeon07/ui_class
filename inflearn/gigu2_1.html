@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지구본 움직이기(분리)</title>
+
+    <style>
+        body{
+            font-size: 20px;
+        }
+
+        #panel{
+            width: 600px;
+            height: 500px;
+            border: 1px solid #999;
+            position: relative;
+        }
+        #gigu {
+            position: absolute;
+            width: 80px;
+            left: 50px;
+            top: 120px;
+        }
+        #nav{
+            text-align: center;
+            width: 600px;
+        }
+    </style>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+    
+    <script>
+        var $gigu = null;   //전역변수로 선언
+
+        $(document).ready(function() {
+            initialize();
+            event();
+        });
+
+        //전역변수를 초기화
+        function initialize() {
+            $gigu = $("#gigu");
+        }
+
+        //이벤트와 관련된 내용을 함수로 등록
+        function event(){
+            $("#btnStart").click(function(){
+                //지구본 움직이기
+                //지구본 위치 값 구하기
+                var x =parseInt($("#txtX").val());
+                var y = parseInt($("#txtY").val());
+                moveGigu(x,y);
+            });
+        }
+        //지구본의 움직임을 구현
+        function moveGigu(x,y) {
+            if((x >= 0 && x<=600) && (y>=0 && y <= 300)){
+                $gigu.css({
+                    left: x,
+                    top : y
+                });
+            }else {
+                alert("입력된 값이 범위 값을 벗어났습니다.")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <div id="panel">
+            <img src="../inflearn/img/gigu.png" id="gigu">
+        </div>
+
+        <div id="nav">
+            <label>x값 입력 : </label>
+            <input id="txtX">
+            <br>
+            <label>y값 입력 : </label>
+            <input id="txtY">
+
+            <br>
+            <button id="btnStart">지구본 움직이기</button>
+        </div>
+    </div>
+</body>
+
+</html>
