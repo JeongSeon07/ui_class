@@ -11,6 +11,8 @@
 
     <script>
         $(function(){
+
+            console.clear();
             //선택한 태그의 src속성의 값을 얻어냄
             let srcVal =  $("#sec_1 img").attr("src");
             console.log(srcVal);        //속성값 출력
@@ -21,7 +23,7 @@
                 width: 200,
                 //위에서 얻어낸 속성객체의 replace 메소드로 속성값 치환
                 src: srcVal.replace("1.jpg","2.jpg"),
-                alt:"바위"
+                alt:"가위"
             }).
             //지정된 속성은 제거
             removeAttr("border");       //지정된 속성은 제거
