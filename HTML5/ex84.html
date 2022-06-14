@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+
+            console.clear();
+
+            $(".btn1.on").on("mouseover focus", function() {
+                alert("Hello");
+            });
+            //동적으로 1번째 버튼에 class=on 속성등록
+            $(".btn1").addClass("on");
+
+            $(document).on("mouseover focus","btn2.on",function() {
+                alert("Welcome");;
+
+                // $(".btn2").addClass("on")
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <p><button class="btn1">버튼1</button></p>   
+        <p><button class="btn2">버튼2</button></p>
+
+    </div>
+</body>
+
+</html>

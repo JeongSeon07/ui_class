@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+
+            console.clear();
+
+            $("#rel_site").on("change", function () {
+                $(".txt").text($(this).val());
+                
+                //this: E.target
+                //일반적인 태그의 컨텐츠를 가져올 때는 text or html 메소드를 사용하지만
+                //입력양식의 사용자가 입력한 값이;나 선택한 값을 가져올 때는 val메소드를 사용해야한다.
+                
+            })
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <select id="rel-site">
+        <option value="">사이트선택</option>
+        <option value="www.google.com">구글</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.daum.net">다음</option>
+    </select>
+
+    <p class="txt"></p>
+</body>
+
+</html>
