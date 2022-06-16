@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            console.clear();
+
+            $("#newsWrap_1").load("jquery_ajax_news.html #news_1");
+            $("#newsWrap_2").load("jquery_ajax_news.html #news_2");
+            $("#tt").load("jquery_ajax_news.html #jj");
+
+        })
+    </script>
+</head>
+
+<body>
+    <h1>LOAD 1</h1>
+    <div id="newsWrap_1"></div>
+
+    <h1>LOAD 2</h1>
+    <div id="newsWrap_2"></div>
+
+    <h1>LOAD 3</h1>
+    <div id="tt"></div>
+</body>
+
+</html>

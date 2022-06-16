@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            console.clear();
+
+            $.ajax({
+                url:"json/MOCK_DATA.json",  //이 데이터를 달라
+                // url: "http://localhost:8080/js/MOCK_DATA.json",
+
+                dataType:"json",
+
+                //웹서버에서 요구한 자원(파일)을 잘 받았으면 아래의 success 메소드가 callback된다.
+                success:function (data) {   //받은 데이터를 매개변수로 준다
+                    console.debug('success(data) invoked.');    
+                    console.log(data);      //json 의 배열을 그냥찍기
+                    // json = data;
+
+
+                    if(data.length > 0) {                   //회원정보가 1명 이상 있다면..
+                       
+                        let tbl = $("<table>");              //새로운 요소노드 추가
+                        console.log('+tbl:',tbl);
+
+                        $(data).each(function(index,element) {
+
+                           let id = element.id;
+                           let firstName = element.first_name;
+                           let lastName = element.last_name;
+                           let email = element.email;
+                           let gender = element.gender;
+
+                           //console.log(`>> ${id},${firstName},${lastName},${email},${gender} <<`);
+
+                           let tr = $("<tr>").append(
+                               $("<td>").text(id),
+                               $("<td>").text(firstName),
+                               $("<td>").text(lastName),
+                               $("<td>").text(email),
+                               $("<td>").text(gender)
+                            );
+
+                            tbl.append(tr);
+                        })
+                        
+
+                        $(".container").append(tbl);
+                    }//if
+                }//sucsess method
+            });//$.ajax
+        })
+    </script>
+</head>
+
+<body>
+    <h1>jquery_ajax_news</h1>
+    <hr>
+
+    <div class="container"></div>
+</body>
+
+</html>

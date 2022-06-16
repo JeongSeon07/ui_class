@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            console.clear();
+
+            //$.ajax제이쿼리 메소드로 상세하게 비동기호출을 수행하고
+            //비동기로 받아온 데이터를 이용해서, 현재문서의 dom tree에 반영하자
+            $.ajax({
+                url:"json/MOCK_DATA.json",  //이 데이터를 달라
+                // url: "http://localhost:8080/js/MOCK_DATA.json",
+
+                dataType:"json",
+
+                //웹서버에서 요구한 자원(파일)을 잘 받았으면 아래의 success 메소드가 callback된다.
+                success:function (data) {   //받은 데이터를 매개변수로 준다
+                    console.debug('success(data) invoked.');    
+                    console.log(data);      //json 의 배열을 그냥찍기
+
+
+                    if(data.length > 0) {                   //회원정보가 1명 이상 있다면..
+                       
+                        let tbl =$("<table>");              //새로운 요소노드 추가
+                        console.log('+tbl:',tbl);
+
+                        for(let member of data) {
+                           let id = member.id;
+                           let firstName = member.first_name;
+                           let lastName = member.last_name;
+                           let email = member.email;
+                           let gender = member.gender;
+
+                        //console.log(`>> ${id},${firstName},${lastName},${email},${gender} <<`);
+
+                           let tr = $("<tr>").append(      //제이쿼리의 tr객체를 찾아(만들고) append를 추가한다
+                               $("<td>").text(id),
+                               $("<td>").text(firstName),
+                               $("<td>").text(lastName),
+                               $("<td>").text(email),
+                               $("<td>").text(gender)
+                           );//append
+
+                           tbl.append(tr);
+                        }//for
+                        
+
+                        $(".container").append(tbl);
+                    }//if
+                }//sucsess method
+            });//$.ajax
+
+        })
+    </script>
+</head>
+
+<body>
+    <h1>jquery_ajax_news</h1>
+    <hr>
+
+    <div class="container"></div>
+</body>
+
+</html>
