@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트-5</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        //ready() / load()의 차이점
+        //ready()이벤트는 클라이언트가 사이트를 방문할 때 요청한 HTMl문서객체의 로딩이 끝나면 이벤트를 실행한다.
+        //load()이벤트는 외부에 연동소스(img,video)의 로딩이 끝나면 이벤트룰 실행한다. 
+
+        $(function (){
+            console.clear();
+
+            
+            $(document).ready(function() {
+                let h1 = $('.img').height();
+                console.log('ready() : ',h1);
+
+            });//ready
+
+            $(window).load(function(){
+                let h2 = $('.img').height();
+                console.log('load() : ',h2);
+            });//load
+
+
+        });//jq
+    </script>
+</head>
+
+<body>
+    <p>
+        <!-- 외부에 있는 연동 소스이다. -->
+        <img src="https://picsum.photos/500/500" class="img">
+    </p>
+</body>
+
+</html>

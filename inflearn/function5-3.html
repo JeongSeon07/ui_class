@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수-5(일반함수 풀이)</title>
+
+    <style>
+        .tab-menu{
+            list-style: none;
+            height: 80px;
+        }
+        .tab-menu li {
+            width: 100px;
+            height: 40px;
+            background-position-y: 0;
+            overflow: hidden;
+            display: inline-block;
+            float: left;
+        }
+        .tab-menu li:hover {
+            background-position-y: -40px;
+        }
+        .tab-menu li.select {
+            background-position-y: -80px;
+            height: 80px;
+        }
+        .tab-menu li.menuItem1 {
+            background-image: url(img/newbtn.bar.1.png);
+        }
+        .tab-menu li.menuItem2 {
+            background-image: url(img/newbtn.bar.2.png);
+        }
+        .tab-menu li.menuItem3 {
+            background-image: url(img/newbtn.bar.3.png);
+        }
+        .tab-menu li.menuItem4 {
+            background-image: url(img/newbtn.bar.4.png);
+        }        
+        .tab-menu li.menuItem5 {
+            background-image: url(img/newbtn.bar.5.png);
+        }
+        .tab-menu li.menuItem6 {
+            background-image: url(img/newbtn.bar.6.png);
+        }
+    </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+
+<script>
+    $(function() {
+        //탭메뉴 코드가 실행될 수 있도록 함수 호출
+        tabMenu("#tabMenu1");   //ul태그
+    });
+
+    function tabMenu(seletor) {
+        let $tabMenu = null;
+        let $menuItems = null;
+        //선택한 탭메뉴를 저장할 변수
+        let $selectedMenuItem = null;
+
+        //요소를 초기화
+        function init(selector) {
+            $tabMenu = $(selector);
+            //6개의 웹요소인 li태그를 배열로 받고있다.
+            $menuItems = $tabMenu.find("li");
+        }
+        //이벤트 초기화 및 등록
+        function initEvent() {
+            //배열로 받은 li를 클릭한다면...
+            $menuItems.click(function() {
+                //현재 선택된 li요소를 매개변수로 지정하고 있다.
+                setSelectItem($(this));
+            });
+        }
+
+        //선택된 메뉴 아이템 만들어 주는 함수
+        function setSelectItem($item) {
+            //선택된 메뉴가 있다면
+            if($selectedMenuItem != null){
+                //그 메뉴를 select제거해라
+                $selectedMenuItem.removeClass("select");
+            }
+            //매개변수로 넘어온 선택된 아이템을 대입을 하고 있다.
+            $selectedMenuItem = $item;
+            //그 매뉴를 select를 추가하라.
+            $selectedMenuItem.addClass("select")
+
+            $("#info").html($selectedMenuItem.index());
+        }
+        init(seletor);
+        initEvent();
+    }
+</script>
+</head>
+
+<body>
+    <ul class="tab-menu" id="tabMenu1">
+        <li class="menuItem1"></li>
+        <li class="menuItem2"></li>
+        <li class="menuItem3"></li>
+        <li class="menuItem4"></li>
+        <li class="menuItem5"></li>
+        <li class="menuItem6"></li>
+    </ul>
+
+    <div>선택한 인덱스 값: <span id="info"></span></div>
+</body>
+
+</html>

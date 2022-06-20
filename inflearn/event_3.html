@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트-3(제이쿼리 이용)</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            //버튼에 그룹 이벤트 등록
+            //마우스호버 시, 포커스가 있을 시에 함수 실행
+
+            //1.첫번째 방법------------------------------------------------------
+            // $("#btn").on("mouseover focus",function() {
+            //     alert("안녕하세요");
+            //     console.log('이벤트 발생')
+            // })
+                
+
+            //두번째 방법--------------------------------------------------------
+            // $("#btn").on({
+            //     "mouseover focus" : function() {
+            //         console.log('이벤트 발생')
+            //     }
+            // });
+
+            //세번째 방법----------------------------------------------------
+            $("#btn").on({
+                "mouseover" : function(){
+                    console.log('mouseover E');
+                },
+                "focus" : function() {
+                    console.log('focus E')
+                }
+
+            });
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+   <button id="btn">버튼</button>
+</body>
+
+</html>

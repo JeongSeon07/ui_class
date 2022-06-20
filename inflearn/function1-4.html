@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수-4(리턴값으로 익명함수를 이용)</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+
+    <script>
+        //setInterval() : 윈도우 전역 객체에 존재하며 타이머함수의 일종이다.
+        //주어진 시간동안 지연하다가 주어진 함수를 실행한다.
+        // 즉 지정된 간격으로 함수를 호출한다.
+        //아래함수의 작동은 1초마다 안녕하세요라고 출력한다.
+        setInterval(function() {
+            document.write('안녕하세요구르트.<br>');
+        }, 1000);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
