@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .menu1{
+            list-style:none;
+            height: 80px;
+        }
+        li{
+            width: 100px;
+            height: 40px;
+            background-position-y: 0;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .menu1 li:hover {
+            background-position-y:-40px;
+        }
+        .menu1 li.select {
+            background-position-y:-80px;
+            height: 80px;
+        }
+        
+
+        .menu1 li.menuLi1 {
+            background-image: url(img/newbtn.bar.1.png);
+        }
+        .menu1 li.menuLi2 {
+            background-image: url(img/newbtn.bar.2.png);
+        }
+        .menu1 li.menuLi3 {
+            background-image: url(img/newbtn.bar.3.png);
+        }
+        .menu1 li.menuLi4 {
+            background-image: url(img/newbtn.bar.4.png);
+        }
+        .menu1 li.menuLi5 {
+            background-image: url(img/newbtn.bar.5.png);
+        }
+        .menu1 li.menuLi6 {
+            background-image: url(img/newbtn.bar.6.png);
+        }
+
+    </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.0/jquery-migrate.min.js"></script>
+    <script>
+
+        $(function() {
+            menuFunction("#menu1")
+        });
+        
+
+        function menuFunction(selector){
+            
+            let $menu = null;
+            let $menuList = null;
+            let $selectList = null;
+
+
+            //배열에 li 저장
+            function init(selector) {
+                $menu = $(selector);
+                $menuList = $menu.find("li");
+            }
+
+            //이벤트
+            function setEvent() {
+                $menuList.click(function () {
+                    //클릭한 요소를 매개변수로 하는 click함수
+                    clickMenu($(this));
+                });
+            }
+
+            function clickMenu($clickList) {
+                if($selectList != null){
+                    $selectList.removeClass("select")
+                };
+
+                $selectList = $clickList;
+                $selectList.addClass("select");
+            }
+
+            init(selector);
+            setEvent();
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <ul class="menu1" id="menu1">
+        <li class="menuLi1" ></li>
+        <li class="menuLi2" ></li>
+        <li class="menuLi3" ></li>
+        <li class="menuLi4" ></li>
+        <li class="menuLi5" ></li>
+        <li class="menuLi6" ></li>
+
+    </ul>
+</body>
+
+</html>
